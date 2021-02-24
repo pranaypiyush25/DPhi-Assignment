@@ -1,7 +1,7 @@
 import React from "react";
 
 const NotesContext = React.createContext({
-  currentNote: null,
+  currentNote: { id: 0, title: "", creator: "", note: "" },
   Notes: [
     { id: 1, title: "T1", creator: "Pranay Piyush", note: "This is the Note Section" },
     { id: 2, title: "T2", creator: "Pranay Piyush", note: "This is the Note Section" },

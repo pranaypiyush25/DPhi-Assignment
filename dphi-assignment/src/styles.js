@@ -5,12 +5,18 @@ export default makeStyles(() => ({
     marginBottom: '30px',
     display: 'flex',
     flexDirection: 'row',
-    justifyContent: 'center',
+    justifyContent: 'flex-start',
     alignItems: 'center',
-    backgroundColor: "#000"
+    background: 'transparent',
+    boxShadow: 'none'
   },
   heading: {
-    color: 'rgba(0,183,255, 1)',
+    color: '#fff',
+    margin: "5px 0px"
+  },
+  logo:{
+      height: "50px",
+      margin: "0 25px"
   },
   
 }));

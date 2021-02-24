@@ -32,6 +32,36 @@ export default function reducer(state, action){
                 ...state,
                 Notes: addedNotes
             }
+
+        case 'UPDATE_NOTE':
+            const updatedNote = {
+                ...state.currentNote,
+                title: action.payload.title,
+                creator: action.payload.creator,
+                note: action.payload.note
+            }
+            
+            const updatedNoteIndex = state.Notes.findIndex(
+                note => note.id === state.currentNote.id
+            )
+
+            const updatedNotes = [
+                ...state.Notes.slice(0,updatedNoteIndex),
+                updatedNote,
+                ...state.Notes.slice(updatedNoteIndex+1)
+            ]
+
+            return {
+                currentNote: { id: 0, title: "", creator: "", note: "" },
+                Notes: updatedNotes
+            }
+
+        case'RESET':
+            return{
+                ...state,
+                currentNote: { id: 0, title: "", creator: "", note: "" }
+            }
+
         default:
             return state
     }

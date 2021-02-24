@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import { TextField, Button, Typography, Paper } from "@material-ui/core";
 import useStyles from "./styles";
 import AddIcon from "@material-ui/icons/Add";
@@ -21,7 +21,17 @@ function AddNote() {
       title: "",
       note: "",
     });
+
+    dispatch({ type: "RESET", payload: noteData });
   };
+
+  useEffect(() => {
+    setNoteData({
+      creator: state.currentNote.creator,
+      title: state.currentNote.title,
+      note: state.currentNote.note,
+    });
+  }, [state.currentNote]);
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -32,7 +42,11 @@ function AddNote() {
       noteData.note.trim() === ""
     ) {
     } else {
-      dispatch({ type: "ADD_NOTE", payload: noteData });
+      if (state.currentNote.id == 0) {
+        dispatch({ type: "ADD_NOTE", payload: noteData });
+      } else if (state.currentNote.id != 0) {
+        dispatch({ type: "UPDATE_NOTE", payload: noteData });
+      }
       setNoteData({
         creator: "",
         title: "",
