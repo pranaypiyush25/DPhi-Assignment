@@ -5,17 +5,17 @@ import notesReducer from "./reducer";
 import AddNote from "./components/AddNote/AddNote";
 import Notes from "./components/Notes/Notes";
 import useStyles from "./styles";
-import logo from "./logo.png"
+import logo from "./logo.png";
 function App() {
   const initialState = useContext(NotesContext);
   const [state, dispatch] = useReducer(notesReducer, initialState);
   const classes = useStyles();
-  
-  console.log(state)
+
+  console.log(state);
   return (
     <NotesContext.Provider value={{ state, dispatch }}>
       <AppBar className={classes.appBar} position="static" color="inherit">
-      <img src = {logo} className={classes.logo} />
+        <img src={logo} className={classes.logo} alt="logo" />
         <Typography className={classes.heading} variant="h3">
           Notes
         </Typography>

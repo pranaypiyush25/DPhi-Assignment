@@ -11,4 +11,12 @@ export default makeStyles((theme) => ({
   actionDiv: {
     textAlign: 'center',
   },
+  buttonSubmit:{
+      margin: "5px",
+      padding: "10px"
+  },
+  SearchField:{
+      background: "#fff",
+      borderRadius: "5px"
+  }
 }));

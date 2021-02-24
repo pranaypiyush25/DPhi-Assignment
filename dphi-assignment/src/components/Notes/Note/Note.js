@@ -43,7 +43,7 @@ function Note({ note }) {
         {note.title}
       </Typography>
       <CardContent>
-        <Typography variant="body2" color="textSecondary" component="p">
+        <Typography variant="body1" color="textSecondary" component="p">
           {note.note}
         </Typography>
       </CardContent>

@@ -42,9 +42,9 @@ function AddNote() {
       noteData.note.trim() === ""
     ) {
     } else {
-      if (state.currentNote.id == 0) {
+      if (state.currentNote.id === 0) {
         dispatch({ type: "ADD_NOTE", payload: noteData });
-      } else if (state.currentNote.id != 0) {
+      } else if (state.currentNote.id !== 0) {
         dispatch({ type: "UPDATE_NOTE", payload: noteData });
       }
       setNoteData({
