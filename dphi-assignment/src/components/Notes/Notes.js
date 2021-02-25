@@ -17,9 +17,6 @@ function Notes() {
   const [sortParam, setSortParam] = useState("");
   const [sortOrder, setSortOrder] = useState("");
   const [filter, setFilter] = useState(0);
-  const handleParamChange = (event) => {
-    setSortParam(event.target.value);
-  };
 
   var sortedNotes
 
@@ -35,6 +32,10 @@ function Notes() {
    else if(state.filter_param === 3)
    sortedNotes = lodash.filter(state.Notes,filter_list_year)
 
+  const handleParamChange = (event) => {
+    setSortParam(event.target.value);
+  };
+
 
   const handleOrderChange = (event) => {
     setSortOrder(event.target.value);
@@ -44,7 +45,6 @@ function Notes() {
     setFilter(event.target.value);
     dispatch({ type: "UPDATE_FILTER", payload: event.target.value });
 
-    console.log(sortedNotes)
   };
   function filter_list(note) {
     var note_date = new Date(note.date);
@@ -153,12 +153,10 @@ function Notes() {
             return note;
           } else if (
             note.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-            note.note.toLowerCase().includes(searchTerm.toLowerCase())
+            note.note.toLowerCase().includes(searchTerm.toLowerCase()) ||
+            note.creator.toLowerCase().includes(searchTerm.toLowerCase())
           ) {
             return note;
-          }
-          else{
-              return note;
           }
         })
         .map((note, index) => {

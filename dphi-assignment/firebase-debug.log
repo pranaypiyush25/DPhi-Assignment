@@ -1,0 +1,35 @@
+[debug] [2021-02-25T12:13:46.214Z] ----------------------------------------------------------------------
+[debug] [2021-02-25T12:13:46.215Z] Command:       /home/proxin/.nvm/versions/node/v14.15.5/bin/node /home/proxin/.nvm/versions/node/v14.15.5/bin/firebase deploy
+[debug] [2021-02-25T12:13:46.216Z] CLI Version:   9.5.0
+[debug] [2021-02-25T12:13:46.216Z] Platform:      linux
+[debug] [2021-02-25T12:13:46.216Z] Node Version:  v14.15.5
+[debug] [2021-02-25T12:13:46.216Z] Time:          Thu Feb 25 2021 17:43:46 GMT+0530 (India Standard Time)
+[debug] [2021-02-25T12:13:46.216Z] ----------------------------------------------------------------------
+[debug] [2021-02-25T12:13:46.217Z] 
+[debug] [2021-02-25T12:13:46.221Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-02-25T12:13:46.222Z] > authorizing via signed-in user
+[debug] [2021-02-25T12:13:46.222Z] [iam] checking project dphi-assignment-297a7 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2021-02-25T12:13:46.224Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-02-25T12:13:46.224Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-02-25T12:13:46.478Z] <<< HTTP RESPONSE 200 {"date":"Thu, 25 Feb 2021 12:13:46 GMT","expires":"Mon, 01 Jan 1990 00:00:00 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","pragma":"no-cache","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-02-25T12:13:46.520Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/dphi-assignment-297a7:testIamPermissions  
+ {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2021-02-25T12:13:48.312Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Thu, 25 Feb 2021 12:13:48 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=1158","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-02-25T12:13:48.317Z] > refreshing access token with scopes: []
+[debug] [2021-02-25T12:13:48.318Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-02-25T12:13:48.539Z] <<< HTTP RESPONSE 200 {"cache-control":"no-cache, no-store, max-age=0, must-revalidate","pragma":"no-cache","date":"Thu, 25 Feb 2021 12:13:48 GMT","expires":"Mon, 01 Jan 1990 00:00:00 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-02-25T12:13:48.612Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/dphi-assignment-297a7 [none]
+[debug] [2021-02-25T12:13:49.047Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/dphi-assignment-297a7 200
+[debug] [2021-02-25T12:13:49.048Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/dphi-assignment-297a7 {"projectId":"dphi-assignment-297a7","projectNumber":"10871022925","displayName":"Dphi-Assignment","name":"projects/dphi-assignment-297a7","resources":{"hostingSite":"dphi-assignment-297a7"},"state":"ACTIVE"}
+[info] 
+[info] === Deploying to 'dphi-assignment-297a7'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2021-02-25T12:13:49.058Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-02-25T12:13:49.059Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-02-25T12:13:49.297Z] <<< HTTP RESPONSE 200 {"pragma":"no-cache","expires":"Mon, 01 Jan 1990 00:00:00 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","date":"Thu, 25 Feb 2021 12:13:49 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-02-25T12:13:49.336Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/dphi-assignment-297a7/versions  
+ {"config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"}}
