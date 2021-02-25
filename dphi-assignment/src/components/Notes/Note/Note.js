@@ -9,7 +9,6 @@ import {
 } from "@material-ui/core/";
 import DeleteIcon from "@material-ui/icons/Delete";
 import EditIcon from "@material-ui/icons/Edit";
-import MoreHorizIcon from "@material-ui/icons/MoreHoriz";
 import useStyles from "./styles";
 import note_bg from "../../../note_bg.jpg";
 import NotesContext from '../../../Context'
@@ -28,11 +27,14 @@ function Note({ note }) {
       <div className={classes.overlay}>
         <Typography variant="h6">{note.creator}</Typography>
       </div>
-      <div className={classes.overlay2}>
-        <Button style={{ color: "white" }} size="small">
-          <MoreHorizIcon fontSize="default" />
-        </Button>
-      </div>
+      <Typography
+        className={classes.overlay2}
+        gutterBottom
+        variant="h6"
+        component="h2"
+      >
+        {note.date}
+      </Typography>
       <br/>
       <Typography
         className={classes.title}

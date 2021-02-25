@@ -18,5 +18,14 @@ export default makeStyles((theme) => ({
   SearchField:{
       background: "#fff",
       borderRadius: "5px"
-  }
+  },
+  formControl: {
+    margin: theme.spacing(1),
+    minWidth: 120,
+    backgroundColor: "white",
+    borderRadius: "5px"
+  },
+  selectEmpty: {
+    marginTop: theme.spacing(2),
+  },
 }));

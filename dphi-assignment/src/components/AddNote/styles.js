@@ -22,4 +22,8 @@ export default makeStyles((theme) => ({
   buttonSubmit: {
     marginBottom: 10,
   },
+
+  dateInput:{
+      height: "50px"
+  }
 }));

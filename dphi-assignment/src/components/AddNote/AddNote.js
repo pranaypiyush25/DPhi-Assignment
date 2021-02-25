@@ -11,6 +11,7 @@ function AddNote() {
     creator: "",
     title: "",
     note: "",
+    date: "0000-00-00"
   });
 
   const classes = useStyles();
@@ -20,6 +21,7 @@ function AddNote() {
       creator: "",
       title: "",
       note: "",
+      date: ""
     });
 
     dispatch({ type: "RESET", payload: noteData });
@@ -30,6 +32,7 @@ function AddNote() {
       creator: state.currentNote.creator,
       title: state.currentNote.title,
       note: state.currentNote.note,
+      date: state.currentNote.date
     });
   }, [state.currentNote]);
 
@@ -51,6 +54,7 @@ function AddNote() {
         creator: "",
         title: "",
         note: "",
+        date: ""
       });
     }
   };
@@ -62,7 +66,19 @@ function AddNote() {
         className={`${classes.root} ${classes.form}`}
         onSubmit={handleSubmit}
       >
-        <Typography variant="h6"></Typography>
+        <Typography variant="h6">Add Notes</Typography>
+
+        <TextField
+          name="Date"
+          variant="outlined"
+          fullWidth
+          type="date"
+          value={noteData.date}
+          onChange={(e) =>
+            setNoteData({ ...noteData, date: e.target.value })
+          }
+        />
+
         <TextField
           name="creator"
           variant="outlined"

@@ -23,7 +23,8 @@ export default function reducer(state, action){
                 id: uuidv4(),
                 title: action.payload.title,
                 creator: action.payload.creator,
-                note: action.payload.note
+                note: action.payload.note,
+                date: action.payload.date
             }
 
             const addedNotes = [...state.Notes, newNote]
@@ -38,7 +39,8 @@ export default function reducer(state, action){
                 ...state.currentNote,
                 title: action.payload.title,
                 creator: action.payload.creator,
-                note: action.payload.note
+                note: action.payload.note,
+                date: action.payload.date
             }
             
             const updatedNoteIndex = state.Notes.findIndex(
@@ -53,15 +55,22 @@ export default function reducer(state, action){
 
             return {
                 currentNote: { id: 0, title: "", creator: "", note: "" },
-                Notes: updatedNotes
+                Notes: updatedNotes,
+                filter_param: 0
             }
 
         case'RESET':
             return{
                 ...state,
-                currentNote: { id: 0, title: "", creator: "", note: "" }
+                currentNote: { id: 0, title: "", creator: "", note: "",date: "" }
             }
-
+        
+        case 'UPDATE_FILTER':
+            return{
+                ...state,
+                filter_param: action.payload
+            }
+        
         default:
             return state
     }
