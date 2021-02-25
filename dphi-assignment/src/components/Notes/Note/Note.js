@@ -30,7 +30,7 @@ function Note({ note }) {
       <Typography
         className={classes.overlay2}
         gutterBottom
-        variant="h6"
+        variant="overline"
         component="h2"
       >
         {note.date}
@@ -45,7 +45,7 @@ function Note({ note }) {
         {note.title}
       </Typography>
       <CardContent>
-        <Typography variant="body1" color="textSecondary" component="p">
+        <Typography variant="body1" color="textSecondary" component="p" className={classes.details}>
           {note.note}
         </Typography>
       </CardContent>
